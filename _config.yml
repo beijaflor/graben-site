@@ -1,0 +1,18 @@
+title: グレフィックレコーディング勉強会
+email: info@grareco.jp
+description: >
+  グラレコ勉強会のホームページです。
+baseurl: ""
+url: "http://grareco.jp" # the base hostname & protocol for your site
+official_facebook_url: hoge
+participant_facebook_url: hoge
+
+# Build settings
+markdown: kramdown
+
+# Exclude setting files
+exclude:
+- Gemfile
+- Gemfile.lock
+- package.json
+- node_modules

@@ -1,0 +1,16 @@
+{
+  "name": "site",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "browser-sync start --server '_site' --files '_site/**/*' --no-open",
+    "watch": "jekyll build --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sho Otani <sho.otani@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.11.1"
+  }
+}
