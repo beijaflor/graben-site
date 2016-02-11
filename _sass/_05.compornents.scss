@@ -1,0 +1,72 @@
+// header
+// --------------
+.site-header {
+    @extend %clearfix;
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+    background: #2d3e50;
+
+    .pure-menu-heading {
+        color: white;
+        font-weight: 400;
+        font-size: 120%;
+    }
+    .pure-menu-selected a {
+        color: white;
+    }
+    a {
+        color: #6FBEF3;
+    }
+    li a:hover,
+    li a:focus {
+        background: none;
+        border: none;
+        color: #AECFE5;
+    }
+}
+
+.pure-menu.pure-menu-fixed {
+    border-bottom: none;
+    z-index: 4;
+}
+
+@media ($mq-tab) {
+    .site-header {
+        text-align: left;
+        .pure-menu-list {
+            float: right;
+        }
+    }
+}
+
+// site-title
+// --------------
+.site-title {
+    margin: 0;
+    padding: 0;
+}
+
+// footer
+// --------------
+.site-footer {
+    padding: 0.5em 1em;
+    border-top: solid 1px gray;
+    text-align: center;
+
+    > .copy {display: inline;}
+    > .mail {display: inline;}
+    > .desc {display: block;}
+}
+
+@media ($mq-tab) {
+    .site-footer {
+        text-align: left;
+
+        > .copy {}
+        > .mail {float: right;}
+        > .desc {
+            font-size: $fs-small;
+        }
+    }
+}
