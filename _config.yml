@@ -7,7 +7,7 @@ url: "http://grareco.jp" # the base hostname & protocol for your site
 official_facebook_url: hoge
 participant_facebook_url: hoge
 page_offer_url: /offer.html
-page_url_workshop: hoge
+page_workshop_url: /workshop.html
 
 # Build settings
 markdown: kramdown
