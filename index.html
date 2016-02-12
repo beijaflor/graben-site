@@ -2,22 +2,80 @@
 layout: default
 ---
 
-<div class="home">
+<section class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">{{ site.title }}</h1>
+    </div>
+</section>
 
-  <h1 class="page-heading">Yo-Ho-</h1>
+<div class="content-wrapper">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<section class="section-about top-section">
+  <h2>グラフィックレコーディングとは？</h2>
+  <p><img src="img/about.png" alt="" width="300"></p>
+  <p>グラフィックレコーディングとは、会議での議論やカンファレンスの流れを視覚化し、参加者へ共有する手法です。参加者の思考発話内容をリアルタイムで視覚的にわかりやすく伝えることができるので、アイディア創発の場や、会議での合意形成を促します。</p>
+  <p><a href="{popup}" class="pure-button">（グラフィックレコーディングの説明）</a></p>
+</section>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+<section class="section-aboutus top-section">
+  <h2>グラフィックレコーディング勉強会とは</h2>
+  <p>わたしたちは、「グラフィックレコーディングを通して、ヒトの想いと想いをつなげる架け橋となるような場を、世の中に提供していきたい」と考え、集まった有志の団体です。いつの日か、グラフィックレコーディングが暮らしの中で当たり前のように使われる日を夢見て、活動を推進しています。楽しみながらグラフィックレコーディングを学び、トレーニング方法を体験できる、独自のワークショップを提供しています。</p>
+</section>
+
+<section class="section-workshop top-section">
+  <h2>グラレコ勉強会のワークショップ</h2>
+
+  <p><img src="img/ws.png" alt="" width="600"></p>
+
+  <p>（・多くの。。。。で注目されています・こんなワークショップをこういう風にやってます。・ワークショップのデザイナーやプロのファシリテーターが独自に開発した　グラレコ習得メソッドを使って、楽しく体験、習得できる、ワークショップを提供しています。）</p>
+
+  <p><a href="#" class="pure-button">ワークショッププログラムの説明</a></p>
+</section>
+
+<section class="section-nextevent top-section">
+  <h2>次回のイベント</h2>
+
+  <div class="event-info">
+    <img class="thumb" src="holder.js/200x125">
+
+    <dl class="event-detail">
+      <dt class="label">タイトル</dt>
+      <dd class="text">ほげほげグラフィックレコーディング勉強会</dd>
+      <dt class="label">日時</dt>
+      <dd class="text">2016/5/5 18:00〜21:00</dd>
+      <dt class="label">会場</dt>
+      <dd class="text">恵比寿301スタジオ</dd>
+    </dl>
+    <p><a href="#" class="pure-button pure-button-primary">申し込みはこちら</a></p>
+  </div>
+</section>
+
+<section class="section-activities top-section">
+  <h2>活動の様子</h2>
+
+  <ul class="report-list">
+    {% for post in site.posts limit:5 %}
+      <li><a href="{{post.url}}" class="report-item">
+        <img class="thumb" src="holder.js/90x60" alt="{{ post.thumb }}">
+        <ul class="detail">
+          <li class="title">{{ post.title }}</li>
+          <li class="category pure-button">{{ post.categories }}</li>
+          <li class="date">{{ post.date | date: "%Y/%-d/%m" }}</li>
+        </ul>
+      </a></li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p><a href="#" class="pure-button">活動実績一覧</a></p>
+</section>
 
-</div>
+<section class="section-facebook top-section">
+  <p>
+    <a href="#" class="pure-button pure-button-primary"><i class="fa fa-facebook"></i> Facebookページ</a>
+    <a href="#" class="pure-button">参加者交流グループ</a>
+  </p>
+</section>
+
+    {% include footer.html %}
+
+<!-- /contents-wrapper --></div>
