@@ -10,6 +10,7 @@ page_offer_url: /offer.html
 page_workshop_url: /workshop.html
 page_url_checklist: /checklist.html
 page_url_itemlist: /itemlist.html
+page_url_activities: /activities.html
 
 # Build settings
 markdown: kramdown
