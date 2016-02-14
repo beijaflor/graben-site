@@ -1,19 +1,28 @@
-body {
-  padding-top: 10em;
-  font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+html {
   font-size: 13px;
+}
+
+body {
+  padding-top: 64px;
+  font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
   line-height: 1.7em;
   color: $color-txt-base;
 }
 
 @media ($mq-tab) {
-    body {
+    html {
         font-size: 16px;
     }
 }
 
 h1, h2, h3, h4, h5, h6, label {
     color: $color-txt-head;
+}
+
+a {
+  &:link {color: $color-link;}
+  &:visited {color: $color-link-visited;}
+  &:hover {color: $color-link-hover;}
 }
 
 p {
@@ -31,7 +40,6 @@ ul {
 
 table {
   border-collapse: collapse;
-  font-size: $fs-small;
 }
 
 th, td {

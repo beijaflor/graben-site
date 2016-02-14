@@ -1,5 +1,17 @@
 @charset "utf-8";
 
+// headings
+// --------------
+
+.page-subHeader {
+    font-size: $fs-mlarge;
+}
+
+.page-miniHeader {
+    font-size: $fs-normal;
+    margin-bottom: 0.3em;
+}
+
 // ghost button
 // --------------
 
@@ -174,7 +186,60 @@
     }
 }
 
-// about
+// link with cared
+// --------------
+
+._withCaret {
+    &:before {
+        content: "\f0da";
+        font-family: FontAwesome;
+        margin-right: 0.25rem;
+    }
+}
+
+// list with marker
+// --------------
+._withMarker {
+    background-image: url("data:image/gif;base64,R0lGODlhAgACAIAAAH+MjQAAACH5BAAAAAAALAAAAAACAAIAAAIChFEAOw==");
+    background-repeat: no-repeat;
+    background-position: 0 0.85em;
+    padding-left: 10px;
+}
+
+.addition {
+    font-size: $fs-small;
+    display: block;
+}
+
+// normal-list
+// --------------
+
+.normal-list {
+    > .item {
+    }
+}
+
+// wide-list
+// --------------
+
+.wide-list {
+    line-height: 1.4;
+    > .item {
+        margin-bottom: 20px;
+    }
+}
+
+// inline-list
+// --------------
+
+.inline-list {
+    > .item {
+        display: inline;
+        margin-right: 2rem;
+    }
+}
+
+// section
 // --------------
 .top-section {
     text-align: center;
@@ -184,6 +249,26 @@
 
 .section-facebook {
     margin: 50px auto;
+}
+
+.page-section {
+    margin: 50px auto;
+}
+
+// 枠付き注釈
+// --------------
+
+.box-note {
+    border: solid 1px $color-bd;
+    padding: 0 30px;
+}
+
+// ページのヘッダー
+// --------------
+.post-header {
+    background: $color-bg;
+    padding: 40px;
+    margin-bottom: 20px;
 }
 
 // 次回のイベント
@@ -258,10 +343,11 @@
 .offer-form {
     background: $color-bg;
     padding: 30px;
+    margin-bottom: 30px;
 
     .form-item {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         > .label {
             display: block;
             color: #34495e;
@@ -269,6 +355,7 @@
         > .option {
             display: block;
             color: #888;
+            padding-left: 5px;
         }
 
         > .addition {
@@ -280,4 +367,11 @@
             padding-left: 10px;
         }
     }
+}
+
+// 活動一覧
+// --------------
+
+.activities-table {
+    margin-bottom: 30px;
 }
