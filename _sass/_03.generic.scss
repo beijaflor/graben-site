@@ -1,6 +1,19 @@
 body {
   padding-top: 10em;
   font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+  font-size: 13px;
+  line-height: 1.7em;
+  color: $color-txt-base;
+}
+
+@media ($mq-tab) {
+    body {
+        font-size: 16px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, label {
+    color: $color-txt-head;
 }
 
 p {
