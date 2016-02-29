@@ -32,6 +32,8 @@
 
 .post-content {
     padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 // content-wrapper
@@ -136,7 +138,7 @@
     height: 88%;
     top: 0;
     left: 0;
-    position: fixed !important;
+    position: absolute !important;
 }
 
 .splash {
@@ -309,7 +311,7 @@
         color: $color-txt-base;
         border-bottom: solid 1px $color-bd;
         text-align: left;
-        padding: 5px 0;
+        padding: 15px 0;
         transition: background 0.1s ease-out;
 
         &:hover {
@@ -317,10 +319,12 @@
         }
 
         > .thumb {
-            float: right;
+            float: left;
+            margin-right: 10px;
         }
         > .detail {
             list-style: none;
+            padding-left: 180px;
 
             > .title {
                 font-weight: bold;
@@ -332,6 +336,9 @@
             > .category {
                 display: inline;
                 font-size: $fs-xsmall;
+            }
+            p {
+                margin: 10px 0;
             }
         }
     }
@@ -374,4 +381,51 @@
 
 .activities-table {
     margin-bottom: 30px;
+}
+
+.activirie-list {
+    > .listitem {
+        @extend %clearfix;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: solid 1px $color-table-bd;
+
+        > .badge {
+            float: left;
+            border: solid 1px gray;
+            line-height: 3em;
+            width: 4em;
+            height: 3em;
+            text-align: center;
+        }
+        > .title {
+            font-weight: bold;
+            margin-bottom: 0;
+            margin-left: 5rem;
+        }
+        > .detail {
+            margin-left: 5rem;
+
+            > .item {
+                display: inline;
+                margin-right: 1rem;
+
+                > .label {
+                    line-height: 1;
+                    font-size: $fs-xsmall;
+                    background: gray;
+                    color: white;
+                    display: inline-block;
+                    padding: 3px 6px;
+                    margin-right: 0.4em;
+                    vertical-align: middle;
+                }
+                > .data {
+                    font-size: $fs-small;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
 }

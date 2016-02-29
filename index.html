@@ -19,9 +19,8 @@ layout: top
 <section class="section-workshop top-section">
   <h2>グラレコ勉強会のワークショップ</h2>
 
-  <p><img src="img/ws.png" alt="" width="600"></p>
-
-  <p>（・多くの。。。。で注目されています・こんなワークショップをこういう風にやってます。・ワークショップのデザイナーやプロのファシリテーターが独自に開発した　グラレコ習得メソッドを使って、楽しく体験、習得できる、ワークショップを提供しています。）</p>
+  <p>「ヒトの想いを見えるようにしたい、つなぎたい」。グラフィックレコーディング勉強会のワークショップは、そんな願いをもつ多くの団体・企業から注目されています。
+ワークショップは大きくわけて2種類あります。「グラフィックレコーディングをやってみたい」という方向けの初級編、「グラフィックレコーディングを活かしたい」という方向けの活用編です。<br>プログラムを開発しているのは、ワークショップデザイナーやグラフィックレコーダー、プロのファシリテーター。独自にグラフィックレコーディング習得メソッドを開発しています。「楽しい！」「続けたい！」という参加者のみなさんに想いを持ち帰ってもらい、毎日の活動につなげられるようなプログラムを提供しています。</p>
 
   <p><a href="{{ site.page_workshop_url }}" class="pure-button">ワークショッププログラムの説明</a></p>
 </section>
@@ -50,9 +49,10 @@ layout: top
   <ul class="report-list">
     {% for post in site.posts limit:5 %}
       <li><a href="{{post.url}}" class="report-item">
-        <img class="thumb" src="holder.js/90x60" alt="{{ post.thumb }}">
+        <img class="thumb" src="holder.js/160x140" alt="{{ post.thumb }}">
         <ul class="detail">
           <li class="title">{{ post.title }}</li>
+          {{ post.excerpt }}
           <li class="category pure-button">{{ post.categories }}</li>
           <li class="date">{{ post.date | date: "%Y/%-d/%m" }}</li>
         </ul>
