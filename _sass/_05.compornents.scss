@@ -358,6 +358,18 @@
         > .label {
             display: block;
             color: #34495e;
+
+            &._isRequire:after {
+                content: "必須";
+                display: inline-block;
+                background: red;
+                color: white;
+                font-size: $fs-small;
+                line-height: 1.2;
+                padding: 4px 6px 2px;
+                vertical-align: middle;
+                margin-left: 0.4rem;
+            }
         }
         > .option {
             display: block;
