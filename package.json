@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "staging": "firebase deploy",
     "serve": "browser-sync start --server '_site' --files '_site/**/*' --no-open",
     "watch": "jekyll build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
