@@ -12,6 +12,7 @@
   "author": "Sho Otani <sho.otani@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.11.1"
+    "browser-sync": "^2.11.1",
+    "validate-js": "^2.0.1"
   }
 }

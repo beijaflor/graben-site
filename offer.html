@@ -48,8 +48,7 @@ layout: page
     </tr>
   </table>
   <ul class="inline-list">
-    <li class="item _withCaret"><a href="{{ site.page_url_checklist }}">実施に向けての確認事項</a></li>
-    <li class="item _withCaret"><a href="{{ site.page_url_itemlist }}">備品リスト</a></li>
+     <li class="item _withCaret"><a href="{{ site.page_url_itemlist }}">備品リスト</a></li>
   </ul>
 </section>
 
@@ -67,77 +66,120 @@ layout: page
   <p>グラフィックレコーディング勉強会では、企業様へのワークショップのご提供はおこなっておりません。ただし、協賛という形でイベントの開催を検討することは可能です。また、企業様向けワークショップの対応可能な会社を紹介することも可能です。くわしくは、お問い合わせください。</p>
 </section>
 
-<form method="POST" action="//formspree.io/sho.otani@gmail.com" class="offer-form">
+<form method="POST" name="offer-form" action="//formspree.io/sho.otani@gmail.com" class="offer-form">
   <input type="hidden" name="_next" value="//luminous-inferno-5891.firebaseapp.com/thanks.html" />
   <p>このたびは、グラフィックレコーディング勉強会の出張ワークショップをご検討いただき誠にありがとうございます。<br>下記、お申し込み入力フォームに必要事項をご記入ください。</p>
 
   <label class="form-item">
     <span class="label _isRequire">お名前</span>
-    <input type="text" name="name" size="20">
+    <input type="text" name="name" id="name" size="20">
   </label>
   <label class="form-item">
     <span class="label _isRequire">メールアドレス</span>
-    <input type="text" name="email" size="20">
+    <input type="text" name="email" id="email" size="20">
   </label>
   <label class="form-item">
     <span class="label">組織名</span>
-    <input type="text" name="organization" size="40">
+    <input type="text" name="organization" id="organization" size="40">
   </label>
   <div class="form-item">
     <span class="label _isRequire">組織の種別について、最も近いものをお選びください。</span>
-    <label class="option"><input type="radio" name="org_type" value="企業、営利目的の組織">企業、営利目的の組織</label>
-    <label class="option"><input type="radio" name="org_type" value="任意団体、非営利組織、社会人コミュニティ">任意団体、非営利組織、社会人コミュニティ</label>
-    <label class="option"><input type="radio" name="org_type" value="学校、研究室、ゼミ">学校、研究室、ゼミ</label>
-    <label class="option"><input type="radio" name="org_type" value="その他">その他</label>
+    <label class="option"><input type="radio" name="org_type" id="org_type1" value="企業、営利目的の組織">企業、営利目的の組織</label>
+    <label class="option"><input type="radio" name="org_type" id="org_type2" value="任意団体、非営利組織、社会人コミュニティ">任意団体、非営利組織、社会人コミュニティ</label>
+    <label class="option"><input type="radio" name="org_type" id="org_type3" value="学校、研究室、ゼミ">学校、研究室、ゼミ</label>
+    <label class="option"><input type="radio" name="org_type" id="org_type4" value="その他">その他</label>
   </div>
   <label class="form-item">
     <span class="label _isRequire">グラフィックレコーディング勉強会のワークショップに期待することを教えてください。</span>
-    <textarea name="freeform" rows="3" cols="80"></textarea>
+    <textarea name="freeform" id="freeform" rows="3" cols="80"></textarea>
   </label>
   <div class="form-item">
     <span class="label _isRequire">希望するワークショップは、どのタイプですか？</span>
-    <label class="option"><input type="radio" name="ws_type" value="入門編　４時間">入門編　４時間</label>
-    <label class="option"><input type="radio" name="ws_type" value="活用編　４時間">活用編　４時間</label>
-    <label class="option"><input type="radio" name="ws_type" value="体験版　９０分">体験版　９０分</label>
-    <label class="option"><input type="radio" name="ws_type" value="相談してから判断したい">相談してから判断したい</label>
-    <label class="option"><input type="radio" name="ws_type" value="その他">その他</label>
+    <label class="option"><input type="radio" name="ws_type" id="ws_type1" value="入門編　４時間">入門編　４時間</label>
+    <label class="option"><input type="radio" name="ws_type" id="ws_type2" value="活用編　４時間">活用編　４時間</label>
+    <label class="option"><input type="radio" name="ws_type" id="ws_type3" value="体験版　９０分">体験版　９０分</label>
+    <label class="option"><input type="radio" name="ws_type" id="ws_type4" value="相談してから判断したい">相談してから判断したい</label>
+    <label class="option"><input type="radio" name="ws_type" id="ws_type5" value="その他">その他</label>
     <p class="addition">※ご提供するワークショッププログラムは、<a href="{{ site.page_workshop_url }}">プログラム説明のページ</a>をご参照ください。</p>
   </div>
   <label class="form-item">
     <span class="label _isRequire">出張してほしい地域はどちらですか？市町村レベルまでご記入ください。</span>
-    <input type="text" name="place" size="20">
+    <input type="text" name="place" id="place" size="20">
     <p class="addition">※現在わかっている範囲で結構です。</p>
   </label>
   <label class="form-item">
     <span class="label _isRequire">開催を希望される時期はいつごろですか？</span>
-    <input type="text" name="request_date" size="20">
+    <input type="text" name="request_date" id="request_date" size="20">
     <p class="addition">記入例：１月中旬〜２月末まで<br>※お申し込み日から開催日まで、最低40日以上間隔が必要です。<br>※具体的な日時は、別途、調整させていただきます。</p>
   </label>
   <div class="form-item">
     <span class="label _isRequire">見込んでいる参加者人数について、最も近いものを教えてください。</span>
-    <label class="option"><input type="radio" name="num_perticipant" value="10名以下">10名以下</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="15名程度">15名程度</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="20名程度">20名程度</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="25名程度">25名程度</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="30名程度">30名程度</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="35名程度">35名程度</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="40名程度">40名程度</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="45名以上">45名以上</label>
-    <label class="option"><input type="radio" name="num_perticipant" value="全く検討がつかない">全く検討がつかない</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant1" value="10名以下">10名以下</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant2" value="15名程度">15名程度</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant3" value="20名程度">20名程度</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant4" value="25名程度">25名程度</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant5" value="30名程度">30名程度</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant6" value="35名程度">35名程度</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant7" value="40名程度">40名程度</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant8" value="45名以上">45名以上</label>
+    <label class="option"><input type="radio" name="num_perticipant" id="num_perticipant9" value="全く検討がつかない">全く検討がつかない</label>
   </div>
   <div class="form-item">
     <span class="label _isRequire">ワークショップの参加者の特性について、当てはまるものすべてにチェックを入れてください。</span>
-    <label class="option"><input type="radio" name="type_perticipant" value="絵を描くことに苦手意識がある人が多い">絵を描くことに苦手意識がある人が多い</label>
-    <label class="option"><input type="radio" name="type_perticipant" value="ファシリテーションに馴染みがない人が多い">ファシリテーションに馴染みがない人が多い</label>
-    <label class="option"><input type="radio" name="type_perticipant" value="ワークショップやグループワークに馴染みがない人が多い">ワークショップやグループワークに馴染みがない人が多い</label>
-    <label class="option"><input type="radio" name="type_perticipant" value="中学生以下のお子様が参加される可能性がある">中学生以下のお子様が参加される可能性がある</label>
+    <label class="option"><input type="radio" name="type_perticipant"  id="type_perticipant1" value="絵を描くことに苦手意識がある人が多い">絵を描くことに苦手意識がある人が多い</label>
+    <label class="option"><input type="radio" name="type_perticipant"  id="type_perticipant2" value="ファシリテーションに馴染みがない人が多い">ファシリテーションに馴染みがない人が多い</label>
+    <label class="option"><input type="radio" name="type_perticipant"  id="type_perticipant3" value="ワークショップやグループワークに馴染みがない人が多い">ワークショップやグループワークに馴染みがない人が多い</label>
+    <label class="option"><input type="radio" name="type_perticipant"  id="type_perticipant4" value="中学生以下のお子様が参加される可能性がある">中学生以下のお子様が参加される可能性がある</label>
     <p class="addition">※想定できる範囲で結構です。</p>
   </div>
   <label class="form-item">
-    <span class="label _isRequire">ご要望、ご心配ごとなどありましたら、ご自由にお書きください。</span>
-    <textarea name="freeform" rows="3" cols="80"></textarea>
+    <span class="label">ご要望、ご心配ごとなどありましたら、ご自由にお書きください。</span>
+    <textarea name="freeform" id="freeform" rows="3" cols="80"></textarea>
   </label>
 
   <button class="pure-button">送信する</button>
 
 </form>
+
+<script src="js/validate.min.js"></script>
+<script>
+var validator = new FormValidator('offer-form', [{
+    name: 'name',
+    rules: 'required'
+}, {
+    name: 'email',
+    rules: 'required|valid_email'
+}, {
+    name: 'org_type',
+    rules: 'required'
+}, {
+    name: 'freeform',
+    rules: 'required'
+}, {
+    name: 'ws_type',
+    rules: 'required'
+}, {
+    name: 'place',
+    rules: 'required'
+}, {
+    name: 'request_date',
+    rules: 'required'
+}, {
+    name: 'num_perticipant',
+    rules: 'required'
+}, {
+    name: 'type_perticipant',
+    rules: 'required'
+}], function(errors, evt) {
+    if (errors.length > 0) {
+      console.log("error");
+      console.log(errors);
+
+      if (event && evt.preventDefault) {
+          evt.preventDefault();
+      } else if (event) {
+          event.returnValue = false;
+      }
+    }
+});
+</script>
