@@ -134,7 +134,7 @@ layout: page
   </div>
   <label class="form-item">
     <span class="label">ご要望、ご心配ごとなどありましたら、ご自由にお書きください。</span>
-    <textarea name="freeform" id="freeform" rows="3" cols="80"></textarea>
+    <textarea name="extra" id="extra" rows="3" cols="80"></textarea>
   </label>
 
   <button class="pure-button">送信する</button>
@@ -171,15 +171,38 @@ var validator = new FormValidator('offer-form', [{
     name: 'type_perticipant',
     rules: 'required'
 }], function(errors, evt) {
-    if (errors.length > 0) {
-      console.log("error");
-      console.log(errors);
-
       if (event && evt.preventDefault) {
           evt.preventDefault();
       } else if (event) {
           event.returnValue = false;
       }
+
+    var i, j, e;
+    if (errors.length > 0) {
+      console.log("error");
+      console.log(errors);
+
+      (function() {
+        var i, obj, index, objectList, classList, className = "-error";
+        objectList = document.querySelectorAll("."+className);
+        for(i=0; i < objectList.length; i++) {
+          obj = objectList[i];
+          classList = obj.className.split(' ');
+          index = classList.indexOf(className);
+          if(index >= 0) {
+            classList.splice(index, 1);
+            obj.className = classList.join(' ');
+          }
+        }
+      })();
+
+      for(i=0; i < errors.length; i++) {
+        e = document.getElementsByName(errors[i].name);
+        for(j=0; j < e.length; j++) {
+          e[j].className = (e[j].className) === "" ? "-error" : e[j].className + " " + "-error";
+        };
+      }
+
     }
 });
 </script>
