@@ -14,6 +14,8 @@ page_url_activities: /activities.html
 
 # Build settings
 markdown: kramdown
+gems:
+  - jekyll-babel
 
 # Exclude setting files
 exclude:
