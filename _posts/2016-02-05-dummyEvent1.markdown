@@ -3,6 +3,8 @@ layout: post
 title:  "グラフィックレコーディングをやってみよう！ワークショップ@DeNAヒカリエ本社"
 date:   2016-02-29 19:14:36 +0900
 categories: やってみよう編
+place: DeNAヒカリエ本社
+company: DeNA
 thumb: "images/hoge.jpg"
 ---
 

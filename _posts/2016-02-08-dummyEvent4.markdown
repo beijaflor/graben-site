@@ -3,6 +3,8 @@ layout: post
 title:  "イメージや情報を見える化しよう！グラフックレコーディングワークショップ @ クリーク＆リバー株式会社"
 date:   2015-02-08 19:14:36 +0900
 categories: やってみよう編
+place: クリーク＆リバー株式会社
+company: クリーク＆リバー株式会社
 thumb: "images/hoge.jpg"
 ---
 

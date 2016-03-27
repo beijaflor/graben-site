@@ -3,6 +3,8 @@ layout: post
 title:  "グラフィックレコーディングをやってみよう！ワークショップ? @ リクルート本社"
 date:   2015-06-20 19:14:36 +0900
 categories: 活用してみよう編
+place: リクルート本社
+company: リクルート
 thumb: "images/hoge.jpg"
 ---
 

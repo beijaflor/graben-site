@@ -3,6 +3,8 @@ layout: post
 title:  "第一回グラフィックレコーディング勉強会 inHiroshima @ 広島"
 date:   2015-08-29 19:14:36 +0900
 categories: 活用してみよう編
+place: 広島
+company: 広島
 thumb: "images/hoge.jpg"
 ---
 
