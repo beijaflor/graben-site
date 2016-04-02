@@ -5,3 +5,14 @@
         clear: both;
     }
 }
+
+%label {
+  display: inline-block;
+  background: $color-base;
+  color: white;
+  text-align: center;
+  font-size: $fs-xsmall;
+  line-height: 1;
+  border-radius:1em;
+  padding: 0.5em;
+}
