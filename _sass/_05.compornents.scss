@@ -43,6 +43,7 @@
     &.-gray {
         color: $color-gray !important;
         border-color: $color-gray;
+        font-size: $fs-xsmall;
     }
 }
 @media ($mq-tab) {
@@ -52,6 +53,7 @@
         letter-spacing: 0.2em;
         &.-gray {
             border-width: 1px;
+            font-size: $fs-small;
         }
     }
 }
@@ -132,7 +134,12 @@
     > a {
         text-decoration: none;
         font-weight: normal;
-        font-size: $fs-mlarge;
+        font-size: $fs-msmall;
+    }
+    @media ($mq-tab) {
+        > a {
+            font-size: $fs-mlarge;
+        }
     }
 
     &:before {
@@ -332,23 +339,51 @@
 .event-info {
 
     > .thumb {
-        float: left;
     }
     > .event-detail {
         @extend %clearfix;
         margin: 0 auto 20px;
-        padding-left: 380px;
         line-height: 1.3;
         text-align: left;
+
+        > .title {
+            display: block;
+            margin: 0 0 0.5em;
+            font-size: $fs-mlarge;
+            font-weight: bold;
+        }
 
         > .label {
             @extend %label;
 
             width: 3em;
             margin: 0.5em 0;
+            display: inline-block;
+            vertical-align: middle;
         }
         > .text {
             margin: 0;
+            display: inline;
+
+            &:after {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+    }
+
+    @media ($mq-tab) {
+        > .thumb {
+            float: left;
+        }
+        > .event-detail {
+            padding-left: 380px;
+            > .label {
+                display: block;
+            }
+            > .text {
+                display: block;
+            }
         }
     }
 }
@@ -379,7 +414,7 @@
         }
 
         > .thumb {
-            float: left;
+            float: right;
             margin-right: 10px;
             width: 100px !important; // remove !important
             height: auto !important; // remove !important
@@ -387,27 +422,25 @@
 
         > .title {
             font-weight: bold;
-            padding-left: 120px;
+            padding: 0 120px 0 0;
         }
 
         > .detail {
             list-style: none;
-            padding-left: 120px;
             margin: 0;
 
             > .data {
                 display: block;
                 font-size: $fs-normal;
-                margin-left: 5em;
+                margin-left: 4.5rem;
                 line-height: 1;
                 padding: 0.25em 0;
-                margin-bottom: 6px;
             }
             > .label {
                 @extend %label;
 
                 float: left;
-                width: 5em;
+                width: 3.5rem;
             }
             p {
                 margin: 10px 0;
@@ -416,14 +449,18 @@
 
         @media ($mq-tab) {
             > .thumb {
+                float: left;
                 width: auto !important; // remove !important
                 height: auto !important; // remove !important
             }
             > .title {
-                padding-left: 180px;
+                padding: 0 0 0 180px;
             }
             > .detail {
                 padding-left: 180px;
+                > .data {
+                    margin-bottom: 6px;
+                }
             }
         }
     }
