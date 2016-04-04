@@ -30,8 +30,7 @@
 
 .button-ghost {
     color: white !important;
-    border: solid 0px white;
-    border-radius: 0;
+    border: solid 1px white;
     background-color: transparent;
     transition: background 0.3s linear;
     font-size: $fs-small;
@@ -40,12 +39,20 @@
     &:hover {
         background: rgba(255, 255, 255, 0.2);
     }
+
+    &.-gray {
+        color: $color-gray !important;
+        border-color: $color-gray;
+    }
 }
 @media ($mq-tab) {
     .button-ghost {
         border-width: 1px;
         border-radius: 20px;
         letter-spacing: 0.2em;
+        &.-gray {
+            border-width: 1px;
+        }
     }
 }
 
@@ -66,8 +73,7 @@
 
 // content-wrapper
 .content-wrapper {
-    position: absolute;
-    top: 50%;
+    padding-top: 56.25%;
     width: 100%;
     min-height: 12%;
     z-index: 2;
@@ -81,18 +87,18 @@
     padding: 0.5em;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-    background: $color-base;
+    background: white;
 
     .pure-menu-heading {
-        color: white;
+        color: $color-gray;
         font-weight: 400;
         font-size: 120%;
     }
     .pure-menu-selected a {
-        color: white;
+        color: $color-gray;
     }
     a {
-        color: white;
+        color: $color-gray;
     }
     li a:hover,
     li a:focus {
@@ -134,7 +140,7 @@
         display: inline-block;
         width: 48px;
         height: 47px;
-        background: url("../img/graben_logo.png");
+        background: url("../img/graben_logo.png") no-repeat;
         vertical-align: middle;
         margin-right: 0.4em;
     }
@@ -181,65 +187,49 @@
 // --------------
 
 .splash-container {
-    background:url(../img/splash.jpg);
     background-size:cover;
     z-index: 1;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
-    height: 50%;
-    top: 40px;
+    height: 0;
+    padding-bottom: 56.25%;
+    top: 64px;
     left: 0;
-    position: absolute !important;
-    box-shadow: 0 1px 2px $color-shadow;
+    position: absolute;
 }
 
 .splash {
     /* absolute center .splash within .splash-container */
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
+    background: url(../img/splash.jpg);
+    background-size: cover;
     margin: auto;
     position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
-    text-transform: uppercase;
+    box-shadow: 0 1px 2px $color-shadow;
 }
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
-
-display: none;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    background: url("/img/logo.png") center no-repeat;
 }
+
+@media ($mq-tab) {
+    .splash-head {
+        background: url(../img/logo@2x.png) center no-repeat;
+    }
+}
+
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
     color: white;
     letter-spacing: 0.05em;
     opacity: 0.8;
-}
-
-@media ($mq-tab) {
-    .splash {
-        width: 60%;
-        height: 50%;
-    }
-
-    .splash-head {
-        font-size: 250%;
-    }
-}
-
-@media ($mq-wide) {
-    .splash-head {
-        font-size: 300%;
-    }
 }
 
 // link with cared
@@ -391,14 +381,18 @@ display: none;
         > .thumb {
             float: left;
             margin-right: 10px;
+            width: 100px !important; // remove !important
+            height: auto !important; // remove !important
         }
+
         > .title {
             font-weight: bold;
-            padding-left: 180px;
+            padding-left: 120px;
         }
+
         > .detail {
             list-style: none;
-            padding-left: 180px;
+            padding-left: 120px;
             margin: 0;
 
             > .data {
@@ -419,8 +413,22 @@ display: none;
                 margin: 10px 0;
             }
         }
+
+        @media ($mq-tab) {
+            > .thumb {
+                width: auto !important; // remove !important
+                height: auto !important; // remove !important
+            }
+            > .title {
+                padding-left: 180px;
+            }
+            > .detail {
+                padding-left: 180px;
+            }
+        }
     }
 }
+
 
 // 相談フォーム
 // --------------
