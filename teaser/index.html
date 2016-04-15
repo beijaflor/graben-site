@@ -14,6 +14,9 @@
 	<meta name="twitter:site" content="@ozu_syo">
 	<meta name="twitter:creator" content="@ozu_syo">
 	<style media="screen">
+		body {
+			font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+		}
 		html, body, article {
 			background: #f1715e;
 			height: 100%;
@@ -39,6 +42,33 @@
 		}
 		aside:hover {
 			transform: translate(-50%,-50%) rotate(-8deg);
+		}
+		ul {
+			top: 70%;
+			width: 100%;
+			position: absolute;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			display: inline;
+		}
+		li > a {
+			display: inline-block;
+			padding: 15px 10px;
+			color: white;
+			text-decoration: none;
+			border-radius: 3px;
+			width: 12em;
+			text-align: center;
+			margin: 0 0.25em;
+		}
+		.fb-button {
+			background: #3b5998;
+		}
+		.tw-button {
+			background: #55acee;
 		}
 		html, body, p {
 			margin: 0;
@@ -75,12 +105,24 @@
 				text-align: center;
 			}
 			article {
-				margin-bottom: -57px;
+				margin-bottom: -47px;
 				overflow: hidden;
 				min-height: 0;
 			}
+			ul {
+				top: auto;
+				bottom: 57px;
+			}
+			li > a {
+				font-size: 0.9rem;
+				box-sizing: border-box;
+				width: 45%;
+			}
 			.main-image {
 				width: 1024px;
+			}
+			footer {
+				padding-top: 10px;
 			}
 			.fb {
 				display: none;
@@ -98,6 +140,10 @@
 	<aside>
 		近日公開予定！お楽しみに！
 	</aside>
+	<ul>
+		<li><a class="fb-button" href="http://www.facebook.com/share.php?u=https://grarec.org/" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">Facebookでシェアする</a></li>
+		<li><a class="tw-button" href="http://twitter.com/share?text=「近日公開予定！お楽しみに！」グラフィックレコーディング勉強会公式サイト｜予告&url=https://grarec.org/" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">ツイートする</a></li>
+	</ul>
 	<footer>
 		<p class="fb"><img src="img/facebook.png" alt="facebook" width="360" height="52"></p>
 		<p class="copy"><img src="img/copy.png" alt="(C)グラフィックレコーディング勉強会" width="210" height="37"></p>
