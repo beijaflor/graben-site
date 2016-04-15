@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>グラフィックレコーディング勉強会公式サイト｜予告</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:title" content="グラフィックレコーディング勉強会公式サイト｜予告">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://grarec.org/">
@@ -10,17 +11,93 @@
 	<meta property="og:description" content="わたしたちは、「グラフィックレコーディングを通して、ヒトの想いと想いをつなげる架け橋となるような場を、世の中に提供していきたい」と考え、集まった有志の団体です。いつの日か、グラフィックレコーディングが暮らしの中で当たり前のように使われる日を夢見て、活動を推進しています。">
 	<meta property="fb:app_id" content="1585280155134118">
 	<style media="screen">
-		html, body {
+		html, body, article {
+			background: #f1715e;
+			height: 100%;
+			min-width: 1024px;
+			position: relative;
+		}
+		article {
+			margin-bottom: -109px;
+			min-height: 600px;
+		}
+		aside {
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%,-50%) rotate(-10deg);
+			transition: transform 0.5s;
+			font-weight: bold;
+			font-family: sans-serif;
+			color: white;
+			font-size: 1.8rem;
+			background: rgba(241, 113, 94, 0.8);
+			padding: 30px 60px;
+		}
+		aside:hover {
+			transform: translate(-50%,-50%) rotate(-8deg);
+		}
+		html, body, p {
 			margin: 0;
 			padding: 0;
 		}
 		img {
+			vertical-align: top;
+		}
+		.main-image {
 			width: 100%;
 			height: auto;
+		}
+		footer {
+			background: #f1715e;
+			padding-top: 20px;
+			position: relative;
+		}
+		.fb {
+			text-align: center;
+		}
+		.copy {
+			text-align: left;
+		}
+
+		@media screen and (max-width: 600px) {
+			html, body, article {
+				min-width: 320px;
+			}
+			aside {
+				font-size: 1rem;
+				padding: 20px;
+				top: 30%;
+				width: 80%;
+				text-align: center;
+			}
+			article {
+				margin-bottom: -57px;
+				overflow: hidden;
+				min-height: 0;
+			}
+			.main-image {
+				width: 1024px;
+			}
+			.fb {
+				display: none;
+			}
+			.copy {
+				text-align: center;
+			}
 		}
 	</style>
 </head>
 <body>
-	<img src="img/teaser.jpg" alt="近日公開予定！お楽しみに！" width="1280" height="909">
+	<article>
+		<img class="main-image" src="img/head.jpg" alt="近日公開予定！お楽しみに！" width="1024" height="626">
+	</article>
+	<aside>
+		近日公開予定！お楽しみに！
+	</aside>
+	<footer>
+		<p class="fb"><img src="img/facebook.png" alt="facebook" width="360" height="52"></p>
+		<p class="copy"><img src="img/copy.png" alt="(C)グラフィックレコーディング勉強会" width="210" height="37"></p>
+	</footer>
 </body>
 </html>
