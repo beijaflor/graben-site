@@ -1,7 +1,7 @@
 {
   "name": "site",
   "version": "0.0.1",
-  "description": "",
+  "description": "- [Thinklink Graphics – You Think It, We Link It](http://www.thinklinkgraphics.com/) - [Graphic Recording Studio](http://www.graphicrecordingstudio.com/)",
   "main": "index.js",
   "scripts": {
     "staging": "jekyll build; firebase deploy",
@@ -13,6 +13,20 @@
   "author": "Sho Otani <sho.otani@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.11.1"
-  }
+    "browser-sync": "^2.11.1",
+    "eazy-logger": "^3.0.2",
+    "longest": "^1.0.1",
+    "meow": "^3.7.0"
+  },
+  "dependencies": {
+    "validate-js": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beijaflor/graben-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beijaflor/graben-site/issues"
+  },
+  "homepage": "https://github.com/beijaflor/graben-site#readme"
 }
