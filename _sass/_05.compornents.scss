@@ -8,7 +8,10 @@
 }
 
 .page-subHeader {
-    font-size: $fs-mlarge;
+    font-size: $fs-large;
+    margin: 30px 0;
+    border-bottom: 1px solid $color-bd;
+    padding: 0 0 5px;
 }
 
 .page-miniHeader {
@@ -72,6 +75,11 @@
     }
 
 }
+@media ($mq-tab) {
+    .post-content {
+        max-width: 960px;
+    }
+}
 
 // content-wrapper
 .content-wrapper {
@@ -86,7 +94,7 @@
 // --------------
 .site-header {
     @extend %clearfix;
-    padding: 0.5em;
+    padding: 0.5em 40px;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
     background: white;
@@ -285,7 +293,8 @@
 // inline-list
 // --------------
 
-.inline-list {
+ul.inline-list {
+    padding-left: 0;
     > .item {
         display: inline;
         margin-right: 2rem;
@@ -318,7 +327,10 @@
 
 .box-note {
     border: solid 1px $color-bd;
-    padding: 0 30px;
+    padding: 20px 30px 0;
+    > .box-header {
+        font-size: $fs-mlarge;
+    }
 }
 
 // ページのヘッダー
@@ -326,8 +338,31 @@
 .post-header {
     background: $color-bg;
     padding: 40px;
-    margin-bottom: 20px;
+    margin: 0 -40px 20px;
 }
+
+.page-content {
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    th {
+        width: 35%;
+    }
+    td {
+        width: 65%;
+    }
+    p {
+        margin: 1em 0;
+    }
+}
+@media ($mq-tab) {
+    .page-content {
+        max-width: 960px;
+    }
+}
+
+
 
 // 次回のイベント
 // --------------
@@ -410,7 +445,6 @@
 
         &:hover {
             background: $color-bg-active;
-            border-color: $color-bd;
         }
 
         > .thumb {
@@ -579,6 +613,23 @@
 
     a {
         color: $color-txt-base;
+    }
+}
+
+// itemlist-table
+// --------------
+
+.itemlist-table {
+    width: 100%;
+
+    tr > *:nth-child(1) {
+        width: 40%;
+    }
+    tr > *:nth-child(2) {
+        width: 30%;
+    }
+    tr > *:nth-child(3) {
+        width: 30%;
     }
 }
 

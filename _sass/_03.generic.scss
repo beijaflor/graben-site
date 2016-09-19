@@ -5,7 +5,7 @@ html {
 body {
   padding: 64px 0 0;
   font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-  line-height: 1.7em;
+  line-height: 1.8em;
   color: $color-txt-base;
 }
 
@@ -37,6 +37,10 @@ img {
 ul {
   padding: 0;
   list-style: none;
+}
+
+ol {
+  padding: 1.5em;
 }
 
 table {

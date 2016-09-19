@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "staging": "firebase deploy",
+    "staging": "jekyll build; firebase deploy",
     "serve": "browser-sync start --server '_site' --files '_site/**/*' --no-open",
     "watch": "jekyll build --watch",
+    "build": "env JEKYLL_ENV=production jekyll build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sho Otani <sho.otani@gmail.com>",
