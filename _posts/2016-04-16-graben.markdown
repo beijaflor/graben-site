@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "チャレンジ！グラフィックレコーディング2016　~描くことで見える世界を拡げよう！~"
+date:   2016-04-16 12:00:00 +0900
+categories: 初級編/活用編
+place: 株式会社DeNA（東京）
+company: "グラフィックレコーディング勉強会 主催"
+thumb: "images/hoge.jpg"
+---
+
