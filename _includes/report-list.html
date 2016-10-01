@@ -14,8 +14,10 @@
           <dd class="data">{{ post.categories }}</dd>
           <dt class="label">会場</dt>
           <dd class="data">{{ post.place }}</dd>
+          {% if post.company %}
           <dt class="label">依頼元</dt>
           <dd class="data">{{ post.company }}</dd>
+          {% endif %}
         </dl>
       </span></span></li>
     {% endfor %}
