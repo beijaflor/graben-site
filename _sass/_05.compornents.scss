@@ -602,6 +602,8 @@ ul.inline-list {
 }
 
 .activirie-list {
+    padding: 0 10px;
+
     > .listitem {
         @extend %clearfix;
         margin-bottom: 1rem;
@@ -610,11 +612,13 @@ ul.inline-list {
 
         > .badge {
             float: left;
-            border: solid 1px gray;
-            line-height: 3em;
-            width: 4em;
-            height: 3em;
             text-align: center;
+            font-size: $fs-small;
+            width: 68px;
+
+            > img {
+              border: solid 1px gray;
+            }
         }
         > .title {
             font-weight: bold;
@@ -648,6 +652,12 @@ ul.inline-list {
     }
 }
 
+@media ($mq-tab) {
+  .activirie-list {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
 // thanks page
 // --------------
 
