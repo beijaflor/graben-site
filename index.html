@@ -24,31 +24,7 @@ layout: top
   <p><a href="{{ site.page_workshop_url }}" class="pure-button pure-button-primary">ワークショッププログラムの説明</a></p>
 </section>
 
-<section class="section-activities top-section">
-  <h2 class="top-subHeader">活動実績</h2>
-
-  <ul class="report-list">
-    {% for post in site.posts limit:5 %}
-      <li><a href="{{post.url}}" class="report-item"><span class="report-inwrap">
-        <img class="thumb" src="holder.js/100x100" alt="{{ post.thumb }}">
-        <p class="title">{{ post.title }}</p>
-<!--          {{ post.excerpt }}-->
-        <dl class="detail">
-          <dt class="label">日時</dt>
-          <dd class="data">{{ post.date | date: "%Y/%-m/%-d" }}</dd>
-          <dt class="label">レベル</dt>
-          <dd class="data">{{ post.categories }}</dd>
-          <dt class="label">会場</dt>
-          <dd class="data">{{ post.place }}</dd>
-          <dt class="label">依頼元</dt>
-          <dd class="data">{{ post.company }}</dd>
-        </dl>
-      </span></a></li>
-    {% endfor %}
-  </ul>
-
-  <p><a href="{{ site.page_url_activities }}" class="pure-button pure-button-primary">過去の実績一覧</a></p>
-</section>
+{% include report-list.html %}
 
 <!-- /contents-wrapper --></div>
 
