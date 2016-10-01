@@ -205,7 +205,7 @@
 // --------------
 
 .splash-container {
-    background: url(../img/splash.jpg);
+    background: url(../img/splash.jpg) $color-shadow;
     background-size: cover;
     z-index: 1;
     overflow: visible;
