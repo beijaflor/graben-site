@@ -480,9 +480,9 @@ ul.inline-list {
         border-bottom: solid 1px transparent;
         transition: background 0.1s ease-out;
 
-        &:hover {
-            background: $color-bg-active;
-        }
+        // &:hover {
+        //     background: $color-bg-active;
+        // }
 
         .report-inwrap {
             display: block;
