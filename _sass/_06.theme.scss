@@ -16,6 +16,9 @@
 // // }
 
 
+// pure button (override)
+// --------------
+
 .pure-button {
   line-height: 1.2;
 }
@@ -23,9 +26,13 @@
 a.pure-button-primary {
     background-color: $color-base;
     color: white;
-    padding: 1em 2em;
-    border-radius: 5px;
-    font-size: $fs-msmall;
+    padding: 0.9em 2.5em;
+    border-radius: 20px;
+    font-size: $fs-small;
+    margin: 0 10px;
+    &.-fs-xsmall {
+      font-size: $fs-xsmall;
+    }
 }
 
 

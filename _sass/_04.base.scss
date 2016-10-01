@@ -12,6 +12,26 @@
   margin-top: 60px;
 }
 
+.-mt50 {
+  margin-top: 50px;
+}
+
+.-mt40 {
+  margin-top: 40px;
+}
+
+.-mb0 {
+  margin-bottom: 0;
+}
+
 .-bold {
   font-weight: bold;
+}
+
+.-center {
+  text-align: center;
+}
+
+.-fs-small {
+  font-size: $fs-small;
 }

@@ -6,27 +6,24 @@ layout: top
 
 <section class="section-about top-section">
   <h2 class="top-subHeader">グラフィックレコーディングとは？</h2>
-  <p><img src="img/about.png" alt="" width="450"></p>
-  <p>グラフィックレコーディングとは、会議での議論やカンファレンスの流れを視覚化し、参加者へ共有する手法です。参加者の思考発話内容をリアルタイムで視覚的にわかりやすく伝えることができるので、アイディア創発の場や、会議での合意形成を促します。</p>
+  <p><img src="img/about.jpg" alt=""></p>
 
-  <p><a href="#{popup}" class="pure-button pure-button-primary" id="slideBtn">グラフィックレコーディングの利用シーン・効果解説</a></p>
-  <p class="-mt60"><img src="img/about2.png" alt="アイデア創発、合意形成、理解を深める" width="700"></p>
+  <p class="top-leadParagraph">グラフィックレコーディングとは、会議での議論やカンファレンスの流れを視覚化し、<br>参加者へ共有する手法です。参加者の思考発話内容をリアルタイムで視覚的にわかりやすく伝えることができるので、<br>アイディア創発の場や、会議での合意形成を促します。</p>
+
+  <p><img src="img/about2.png" alt="アイデア創発、合意形成、理解を深める"></p>
+
+  <p class="-mt50"><a href="#{popup}" class="pure-button pure-button-primary" id="slideBtn">グラフィックレコーディングの利用シーン・効果解説</a></p>
 </section>
 
 <section class="section-aboutus top-section">
   <h2 class="top-subHeader">グラフィックレコーディング勉強会とは</h2>
-  <p>わたしたちは、「グラフィックレコーディングを通して、ヒトの想いと想いをつなげる架け橋となるような場を、世の中に提供していきたい」と考え、集まった有志の団体です。いつの日か、グラフィックレコーディングが暮らしの中で当たり前のように使われる日を夢見て、活動を推進しています。楽しみながらグラフィックレコーディングを学び、トレーニング方法を体験できる、独自のワークショップを提供しています。</p>
-</section>
+  <p><img src="img/about3.jpg" alt=""></p>
 
-<section class="section-workshop top-section">
-  <h2 class="top-subHeader">グラレコ勉強会のワークショップ</h2>
-
-  <p><img src="img/ws.png" alt="" width="450"></p>
-  <p>「ヒトの想いを見えるようにしたい、つなぎたい」。グラフィックレコーディング勉強会のワークショップは、そんな願いをもつ多くの団体・企業から注目されています。
-ワークショップは大きくわけて2種類あります。「グラフィックレコーディングをやってみたい」という方向けの初級編、「グラフィックレコーディングを活かしたい」という方向けの活用編です。<br>プログラムを開発しているのは、ワークショップデザイナーやグラフィックレコーダー、プロのファシリテーター。独自にグラフィックレコーディング習得メソッドを開発しています。「楽しい！」「続けたい！」という参加者のみなさんに想いを持ち帰ってもらい、毎日の活動につなげられるようなプログラムを提供しています。</p>
+  <p class="top-leadParagraph">わたしたちは、「グラフィックレコーディングを通して、ヒトの想いと想いをつなげる架け橋となるような場を、<br>世の中に提供していきたい」と考え、集まった有志の団体です。いつの日か、グラフィックレコーディングが<br>暮らしの中で当たり前のように使われる日を夢見て、活動を推進しています。<br>楽しみながらグラフィックレコーディングを学び、トレーニング方法を体験できる、独自のワークショップを提供しています。</p>
 
   <p><a href="{{ site.page_workshop_url }}" class="pure-button pure-button-primary">ワークショッププログラムの説明</a></p>
 </section>
+
 
 <section class="section-nextevent top-section">
   <h2 class="top-subHeader">次回のイベント</h2>
@@ -39,8 +36,8 @@ layout: top
 
   <ul class="report-list">
     {% for post in site.posts limit:5 %}
-      <li><a href="{{post.url}}" class="report-item">
-        <img class="thumb" src="holder.js/160x160" alt="{{ post.thumb }}">
+      <li><a href="{{post.url}}" class="report-item"><span class="report-inwrap">
+        <img class="thumb" src="holder.js/100x100" alt="{{ post.thumb }}">
         <p class="title">{{ post.title }}</p>
 <!--          {{ post.excerpt }}-->
         <dl class="detail">
@@ -53,7 +50,7 @@ layout: top
           <dt class="label">依頼元</dt>
           <dd class="data">{{ post.company }}</dd>
         </dl>
-      </a></li>
+      </span></a></li>
     {% endfor %}
   </ul>
 

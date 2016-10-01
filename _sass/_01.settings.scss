@@ -2,14 +2,16 @@
 $color-base:  #f66a55;
 $color-hover: #f5f5f5;
 $color-bd:    #dddddd;
-$color-bg:    #fcfbfa;
+$color-bg:    #fdfaf5;
 
 $color-gray: #5a5a5a;
 $color-shadow: #999;
 $color-bg-active: #fef1ed;
 $color-table-bd:    #ccc;
 
-$color-txt-base:  #7f8c8d;
+$color-bd-gray: #bebebe;
+
+$color-txt-base:  #5a5a5a;
 $color-txt-head:  #34495e;
 
 $color-link:         #0078e7;
@@ -17,6 +19,7 @@ $color-link-visited: #1189f8;
 $color-link-hover:   #cc3300;
 
 // font-size
+$fs-exsmall: 0.50rem;
 $fs-xsmall: 0.60rem;
 $fs-small: 0.78rem;
 $fs-msmall: 0.875rem;

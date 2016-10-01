@@ -5,6 +5,7 @@
 
 .top-subHeader {
     color: $color-base;
+    font-size: $fs-mlarge;
 }
 
 .page-subHeader {
@@ -36,8 +37,9 @@
     border: solid 1px white;
     background-color: transparent;
     transition: background 0.3s linear;
-    font-size: $fs-small;
-    padding: 0.75em 1.5em;
+    font-size: $fs-xsmall;
+    font-weight: bold;
+    padding: 0.8em 1.5em 0.7em;
 
     &:hover {
         background: rgba(255, 255, 255, 0.2);
@@ -56,10 +58,19 @@
         letter-spacing: 0.2em;
         &.-gray {
             border-width: 1px;
-            font-size: $fs-small;
+            font-size: $fs-xsmall;
         }
     }
 }
+
+// top-content
+// --------------
+.top-leadParagraph {
+  font-size: $fs-small;
+  line-height: 1.6;
+  margin: 40px 0;
+}
+
 
 // post-content
 // --------------
@@ -77,7 +88,6 @@
 }
 @media ($mq-tab) {
     .post-content {
-        max-width: 960px;
     }
 }
 
@@ -94,9 +104,10 @@
 // --------------
 .site-header {
     @extend %clearfix;
-    padding: 0.5em 40px;
+    padding: 0.5em 40px 0;
     text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+    border-bottom: 1px solid $color-bd-gray;
+    box-shadow: 0 3px 3px rgba(0,0,0, 0.30);
     background: white;
 
     .pure-menu-heading {
@@ -138,23 +149,24 @@
 .site-title {
     margin: 0;
     padding: 0.1em;
+    line-height: 40px;
 
     > a {
         text-decoration: none;
-        font-weight: normal;
+        font-weight: bold;
         font-size: $fs-msmall;
     }
     @media ($mq-tab) {
         > a {
-            font-size: $fs-mlarge;
+            font-size: $fs-msmall;
         }
     }
 
     &:before {
         content:"";
         display: inline-block;
-        width: 48px;
-        height: 47px;
+        width: 40px;
+        height: 40px;
         background: url("../img/graben_logo.png") no-repeat;
         vertical-align: middle;
         margin-right: 0.4em;
@@ -164,33 +176,24 @@
 // footer
 // --------------
 .site-footer {
-    background: $color-base;
-    color: white;
-    padding: 0.5em 1em;
-    border-top: solid 1px gray;
+    background: $color-bg;
+    padding: 50px 1em 30px;
     text-align: center;
-
-    a:link {
-        color: white;
-    }
-    a:hover {
-        text-decoration: none;
-    }
 
     > .copy, > .mail {
         font-size: $fs-small;
-        display: inline;
         margin: 0;
     }
-    > .desc {display: none;}
 }
 
 @media ($mq-tab) {
     .site-footer {
-        text-align: left;
+        text-align: center;
 
-        > .copy {}
-        > .mail {float: right;}
+        > .mail {}
+        > .copy {
+          margin-top: 50px;
+        }
         > .desc {
             font-size: $fs-small;
         }
@@ -202,40 +205,44 @@
 // --------------
 
 .splash-container {
-    background-size:cover;
+    background: url(../img/splash.jpg);
+    background-size: cover;
     z-index: 1;
     overflow: visible;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-    top: 64px;
+    top: 50px;
     left: 0;
     position: absolute;
+    box-shadow: 0 1px 2px $color-shadow;
 }
 
 .splash {
     /* absolute center .splash within .splash-container */
-    width: 100%;
-    height: 100%;
-    background: url(../img/splash.jpg);
-    background-size: cover;
     margin: auto;
     position: absolute;
-    text-align: center;
-    box-shadow: 0 1px 2px $color-shadow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px $color-gray;
 }
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-    width: 100%;
-    height: 100%;
-    text-indent: -9999px;
-    background: url("/img/logo.png") center no-repeat;
+  color: white;
 }
+
+.splash-lead {
+  color: white;
+}
+
 
 @media ($mq-tab) {
     .splash-head {
-        background: url(../img/logo@2x.png) center no-repeat;
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 0.5em;
     }
 }
 
@@ -306,20 +313,33 @@ ul.inline-list {
 .top-section {
     text-align: center;
     width: 80%;
-    margin: 80px auto;
+    margin: 100px auto;
 }
 
 .section-facebook {
-    margin: 50px auto;
+    margin: 0 auto;
     text-align: center;
 
     .pure-button {
         margin: 0 1em;
+        width: 16em;
     }
 }
 
 .page-section {
-    margin: 50px auto;
+    text-align: center;
+    margin: 50px auto 100px;
+
+}
+
+@media ($mq-tab) {
+    .page-section {
+      max-width: 960px;
+      &.-horizontal {
+        max-width: 100%;
+        min-width: 960px;
+      }
+    }
 }
 
 // 枠付き注釈
@@ -337,14 +357,32 @@ ul.inline-list {
 // --------------
 .post-header {
     background: $color-bg;
-    padding: 40px;
-    margin: 0 -40px 20px;
+    padding: 50px 40px;
+    margin: 0 0 20px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 54px;
+    box-sizing: border-box;
+    background-image: url('/img/post-header-bg.png');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+
+    > .post-title {
+      margin: 0;
+    }
+}
+@media ($mq-tab) {
+    .post-header {
+        min-width: 960px;
+    }
 }
 
 .page-content {
-    padding: 0 30px;
+    padding: 0 0 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 200px;
 
     th {
         width: 35%;
@@ -355,10 +393,13 @@ ul.inline-list {
     p {
         margin: 1em 0;
     }
+    .lead-paragraph {
+      margin-bottom: 50px;
+    }
 }
 @media ($mq-tab) {
     .page-content {
-        max-width: 960px;
+        min-width: 960px;
     }
 }
 
@@ -372,6 +413,7 @@ ul.inline-list {
 }
 
 .event-info {
+    font-size: $fs-small;
 
     > .thumb {
     }
@@ -381,22 +423,15 @@ ul.inline-list {
         line-height: 1.3;
         text-align: left;
 
-        > .title {
-            display: block;
-            margin: 0 0 0.5em;
-            font-size: $fs-mlarge;
-            font-weight: bold;
+        > .label {
+          margin: 0.2em 0;
         }
 
-        > .label {
-            @extend %label;
-
-            width: 3em;
-            margin: 0.5em 0;
-            display: inline-block;
-            vertical-align: middle;
+        > .labelhidden {
+            display: none;
         }
         > .text {
+            font-weight: bold;
             margin: 0;
             display: inline;
 
@@ -408,11 +443,13 @@ ul.inline-list {
     }
 
     @media ($mq-tab) {
+        width: 600px;
+        margin: 35px auto;
         > .thumb {
             float: left;
         }
         > .event-detail {
-            padding-left: 380px;
+            padding-left: 365px;
             > .label {
                 display: block;
             }
@@ -438,7 +475,7 @@ ul.inline-list {
         text-decoration: none;
         color: $color-txt-base;
         text-align: left;
-        padding: 15px 10%;
+        padding: 15px 0;
         border-top: solid 1px transparent;
         border-bottom: solid 1px transparent;
         transition: background 0.1s ease-out;
@@ -447,53 +484,65 @@ ul.inline-list {
             background: $color-bg-active;
         }
 
-        > .thumb {
-            float: right;
-            margin-right: 10px;
-            width: 100px !important; // remove !important
-            height: auto !important; // remove !important
-        }
+        .report-inwrap {
+            display: block;
+            width: 600px;
+            margin: 0 auto;
 
-        > .title {
-            font-weight: bold;
-            padding: 0 120px 0 0;
-        }
-
-        > .detail {
-            list-style: none;
-            margin: 0;
-
-            > .data {
-                display: block;
-                font-size: $fs-normal;
-                margin-left: 4.5rem;
-                line-height: 1;
-                padding: 0.25em 0;
-            }
-            > .label {
-                @extend %label;
-
-                float: left;
-                width: 3.5rem;
-            }
-            p {
-                margin: 10px 0;
-            }
-        }
-
-        @media ($mq-tab) {
             > .thumb {
-                float: left;
-                width: auto !important; // remove !important
+                float: right;
+                margin-right: 10px;
+                width: 100px !important; // remove !important
                 height: auto !important; // remove !important
             }
+
             > .title {
-                padding: 0 0 0 180px;
+                font-size: $fs-msmall;
+                line-height: 1.3;
+                font-weight: bold;
+                padding: 0 120px 0 0;
+                margin-bottom: 15px;
             }
+
             > .detail {
-                padding-left: 180px;
+                font-size: $fs-xsmall;
+                list-style: none;
+                margin: 0;
+
                 > .data {
-                    margin-bottom: 6px;
+                    display: block;
+                    margin-left: 3.5rem;
+                    line-height: 1;
+                    padding: 0.25em 0;
+                }
+                > .label {
+                    @extend %label;
+
+                    font-size: $fs-exsmall;
+                    padding: 0.4em 0.1em 0.2em;
+                    background-color: #fc9889;
+                    float: left;
+                    width: 2.5rem;
+                }
+                p {
+                    margin: 10px 0;
+                }
+            }
+
+            @media ($mq-tab) {
+                > .thumb {
+                    float: left;
+                    width: auto !important; // remove !important
+                    height: auto !important; // remove !important
+                }
+                > .title {
+                    padding: 0 0 0 115px;
+                }
+                > .detail {
+                    padding-left: 115px;
+                    > .data {
+                        margin-bottom: 4px;
+                    }
                 }
             }
         }
@@ -690,4 +739,91 @@ ul.inline-list {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+// workshop
+// --------------
+
+.workshop-quality {
+  @extend %clearfix;
+
+  > .quality-description {
+    > p {
+      font-size: $fs-small;
+      line-height: 1.3;
+    }
+  }
+}
+
+@media ($mq-tab) {
+  .workshop-quality {
+
+    width: 820px;
+    margin: 50px auto;
+
+    > .quality-description {
+      float: left;
+      width: 270px;
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > p {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+.workshop-types {
+
+  > .workshop-type {
+    padding: 20px 0;
+
+    &:hover {
+      background: $color-bg;
+    }
+
+    > .inwrap {
+
+      > .image {}
+      > .title {
+        color: $color-base;
+        font-size: $fs-normal;
+        margin-bottom: 0.2em;
+      }
+      > .description {
+        font-size: $fs-small;
+        line-height: 1.4;
+      }
+      > .pdf {
+        font-size: $fs-small;
+      }
+    }
+  }
+}
+
+@media ($mq-tab) {
+  .workshop-types {
+    margin: 50px 0;
+    text-align: left;
+
+    > .workshop-type {
+      > .inwrap {
+        width: 850px;
+        min-height: 140px;
+        margin: 0 auto;
+        display: block;
+
+        > .image {
+          float: right;
+        }
+        > .title {}
+        > .description {}
+        > .pdf {}
+      }
+    }
+  }
 }
